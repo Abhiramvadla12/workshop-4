@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"  rel="stylesheet" />
+    <title>workshop-4</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+        }
+        p{
+            text-align: center;
+            font-size: 1em;
+            line-height: 5vh;
+        }
+        body{
+          background: linear-gradient(to right,skyblue,lightgreen);
+        }
+        .text{
+            margin-bottom: 20vh;
+        }
+        .first-row{
+            display: grid;
+            grid-template-areas: 'one two three four';
+            margin-bottom: 5vh;
+            justify-content: center;
+            gap: 5vw;
+            position: relative;
+            
+        }
+        .sec-row{
+            display: grid;
+            grid-template-areas: 'one two three';
+            justify-content: center;
+            gap: 5vw;
+            margin-bottom: 5vh;
+            position: relative;
+        }
+        .third-row{
+            display: grid;
+            grid-template-areas: 'one';
+            justify-content: center;
+            position: relative;
+        }
+        hr{
+          margin-left: 1vw;
+          width: 100vw;
+          background-color: black;
+          
+        }
+        .dash-1{
+          position: absolute;
+          bottom: 23vh;
+          z-index: 1000;
+        }
+        .dash-2{
+          position: absolute;
+          top: 140vh;
+        }
+        .dash-3{
+          position: absolute;
+          top: 205vh;
+        }
+        .image-1,.image-2,.image-3,.image-4,.image-5,.image-6,.image-7,.image-8{
+          height: 32vh;
+          width: 100%;
+          background-size: cover;
+          transition: all 1s;
+        }
+        .image-1{
+          background-image: url('./drive-download-20240824T085238Z-001/Img3_3.png');
+          
+        }
+        .image-2{
+            background-image: url('./drive-download-20240824T085238Z-001/Img-Biscotto-Sbrisolotto.png');
+        }
+        .image-3{
+          background-image: url('./drive-download-20240824T085238Z-001/Img_l-Biscotto-Frollino.png');
+        }
+        .image-4{
+          background-image: url('./drive-download-20240824T085238Z-001/Img_l-Biscotto-Muscovado-e-Cannella.png');
+        }
+        .image-5{
+          background-image: url('./drive-download-20240824T085238Z-001/Img_l-Biscotto-Arancia-e-Nocciola.png');
+        }
+        .image-6{
+          background-image: url('./drive-download-20240824T085238Z-001/Img_l-Biscotto-Arancia-e-Nocciola.png');
+        }
+        .image-7{
+          background-image: url('./drive-download-20240824T085238Z-001/Img_1-Biscotto-al-Cioccolato.png');
+        }
+        .image-8{
+          background-image: url('./drive-download-20240824T085238Z-001/Img_l-Biscotto-al-Limone.png');
+        }
+        /* .image-1:hover{
+            background-image: url('./drive-download-20240824T085238Z-001/Img_1.png');
+        } */
+        .elment:hover > .image-1 {
+            background-image: url('./drive-download-20240824T085238Z-001/Img_1.png');
+            cursor: wait;
+            
+        }
+        .links{
+            display: flex;
+            justify-content: space-between;
+        }
+        .element-0:hover > .image-2 {
+            background-image: url('./drive-download-20240824T085238Z-001/Img-Il-Biscotto-Sbrisolotto_\(600x600\).png');
+            cursor: wait;
+        }
+        .element-1:hover > .image-3 {
+            background-image: url('./drive-download-20240824T085238Z-001/Img_Il-Biscotto-Frollino_\(600x600\).png');
+            cursor: wait;
+        }
+        .element-2:hover > .image-4 {
+            background-image: url('./drive-download-20240824T085238Z-001/Img_Il-Biscotto-Muscovado-e-Cannella_\(600x600\).png');
+            cursor: wait;
+        }
+        .element-3:hover > .image-5 {
+            background-image: url('./drive-download-20240824T085238Z-001/Img_Il-Biscotto-Arancia-e-Nocciola_\(600x600\).png');
+            cursor: wait;
+        }
+        .element-4:hover > .image-6 {
+            background-image: url('./drive-download-20240824T085238Z-001/Img_Il-Biscotto-Gocciolato_\(600x600\).png');
+            cursor: wait;
+        }
+        .element-5:hover > .image-7 {
+            background-image: url('./drive-download-20240824T085238Z-001/Img_Il-Biscotto-al-Cioccolato_\(600x600\).png');
+            cursor: wait;
+        }
+        .element-6:hover > .image-8 {
+            background-image: url('./drive-download-20240824T085238Z-001/Img_Il-Biscotto-al-Limone_\(600x600\).png');
+            cursor: wait;
+        }
+        @media screen  and (max-width:770px){
+          .first-row,.sec-row,.third-row{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+          }
+        }
+    </style>
+</head>
+<body>
+      
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900" style="background: linear-gradient(to right,yellow,orange);">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Home</span>
+  </a>
+  <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+        <span class="sr-only">Open user menu</span>
+        <img class="w-8 h-8 rounded-full" src="./IMG_20220711_204656336.jpg" alt="user photo">
+      </button>
+      <!-- Dropdown menu -->
+      <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
+        <div class="px-4 py-3">
+          <span class="block text-sm text-gray-900 dark:text-white">Abhi ram</span>
+          <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">abhiramvadla61@gmail.com</span>
+        </div>
+        <ul class="py-2" aria-labelledby="user-menu-button">
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+          </li>
+        </ul>
+      </div>
+      <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+    <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700" style="background:linear-gradient(to right,aqua,lightblue); ;">
+      <li>
+        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+</nav>
+    <div class="text">
+        <h1>Homemade Cookies</h1>
+        <p class="line-1">Is there anything better than the right cookie at the right moment?</p>
+        <p>With a cup of tea, coffee, on its own or with a glass of milk, at breakfast or for an indulgent pause…</p>
+        <p>there is always a reason to satisfy a small craving. </p>
+        <p>Our cookies embody Infermentum’s principles: select ingredients and an artisanal approach, worthy of true gourmands.</p>
+        <p>You won’t be able to live without them.</p>
+    </div>
+    <div class="first-row">
+          <div class="card elment" style="width: 18rem; padding: 5vh; border: none!important;" >
+            <div class="image-1"></div>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Card title</h5>
+            </div>
+            <div class="card-body links">
+              <span class="item-1">5.5$</span>
+              <button type="button" class="btn btn-outline-dark">Add to cart</button>
+            </div>
+          </div>
+          <div class="card element-0" style="width: 18rem; padding: 5vh; border: none!important;" >
+            <div class="image-2"></div>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Card title</h5>
+            </div>
+            
+            <div class="card-body links">
+              <span>5.5$</span>
+              <button type="button" class="btn btn-outline-dark"> add to cart</button>
+            </div>
+          </div>
+          <div class="card element-1" style="width: 18rem; padding: 5vh; border: none!important;">
+            <div class="image-3"></div>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Card title</h5>
+            </div>
+            
+            <div class="card-body links">
+              <span>5.5$</span>
+              <button type="button" class="btn btn-outline-dark"> Add to cart</button>
+            </div>
+          </div>
+          <div class="card element-2" style="width: 18rem; padding: 5vh; border: none!important;">
+            <div class="image-4"></div>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Card title</h5>
+            </div>
+            
+            <div class="card-body links">
+              <span>5.5$</span>
+              <button type="button" class="btn btn-outline-dark">Add to cart</button>
+            </div>
+          </div>
+    </div>
+    
+    <div class="sec-row">
+        <div class="card element-3" style="width: 18rem; padding: 5vh; border: none!important;">
+            <div class="image-5"></div>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Card title</h5>
+            </div>
+            
+            <div class="card-body links">
+              <span>5.5$</span>
+              <button type="button" class="btn btn-outline-dark">Add to cart</button>
+            </div>
+          </div>
+          <div class="card element-4" style="width: 18rem; padding: 5vh; border: none!important;">
+            <div class="image-6"></div>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Card title</h5>
+            </div>
+            
+            <div class="card-body links">
+              <span>5.5$</span>
+              <button type="button" class="btn btn-outline-dark">Add to cart</button>
+            </div>
+          </div>
+          <div class="card element-5" style="width: 18rem; padding: 5vh; border: none!important;">
+            <div class="image-7"></div>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Card title</h5>
+            </div>
+            
+            <div class="card-body links">
+              <span>5.5$</span>
+              <button type="button" class="btn btn-outline-dark">Add to cart</button>
+            </div>
+          </div>
+    </div>
+   
+    <div class="third-row">
+        <div class="card element-6" style="width: 18rem; padding: 5vh; border: none!important;">
+            <div class="image-8"></div> 
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Card title</h5>
+            </div>
+            <div class="card-body links">
+              <span>5.5$</span>
+              <button type="button" class="btn btn-outline-dark">Add to cart</button>
+            </div>
+          </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
